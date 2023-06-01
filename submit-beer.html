@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Buddy Florida | Contact > Submit A Beer</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">    
+</head>
+
+<body class="bg-dark">
+    <!-- Website Header -->
+    <header>
+      <!-- use for top admin bar / widgets -->
+  </header>
+  
+  <!-- Navigation Bar -->
+  
+  <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark nav-pills">
+          <div class="container">
+              <a class="navbar-brand" href="index.html">
+                  <img src="../images/bb-fl-logo.png" alt="Beer Buddy FL Logo">
+              </a>
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav navbar-nav me-auto mb-2 mb-sm-0">
+                      <li class="nav-item">
+                          <a class="nav-link disabled" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Breweries</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Beers</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link disabled" href="beer-styles.html">Styles</a>
+                      </li>            
+                      <li class="nav-item">
+                          <a class="nav-link disabled" href="submit-beer.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="submit-beer.html">Submit A Beer</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search is inactive" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Breadcrumbs for future use
+      <div class="container-fluid bg-dark">
+        <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page"><a href="index.html" class="text-decoration-none"></a>Home</li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Breweries</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Beers</a></li>
+                <li class="breadcrumb-item"><a href="beer-styles.html" class="text-decoration-none">Styles</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Submit</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Contact</a></li>
+            </ol>
+        </nav>
+        </div>
+    </div>
+    -->
+ 
+    <!-- MAIN CONTENT -->
+ <main class="container-fluid bg-light text-dark py-1">
+    <div class="container">
+        <!-- full width hero image goes here -->
+        <img src="../images/craft-beer-hero.png" class="img-fluid border border-danger border-1 rounded" alt="craft beer image">
+    </div>
+
+    <div class="container py-4">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-5">
+                <h1><em>Submit your favorite Florida Beer!</em></h1>
+                <h5><em>Is our list missing something? Help us make our list complete!</em></h5>
+                <p>
+                    Beer Buddy Florida is still in its infancy. Your help will enable us to grow! Use the controls on the right to sort the table by Brewery to see the beers that we
+                    currently have indexed. If your favorite is not on the list, use the form below to add it! <strong><em>Thanks for helping Beer Buddy Florida to grow!</em></strong>    
+                </p>
+
+                <!-- Form -->
+                <div class="row">
+                    <div class = "col-6">
+                        <div class="form-group">
+                            <label for="beer-name">Beer Name</label>
+                            <input type="text" class="form-control" id="beer-name" tabindex="1">
+                        </div>        
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="brewery">Brewery</label>
+                            <input type="text" class="form-control" id="brewery" tabindex="2">  
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-4">
+                        <div class="form-group">
+                            <label for="beer-abv">ABV</label>
+                            <input type="text" class="form-control" id="beer-abv" tabindex="3">
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="form-group">   
+                            <label for="beer-ibu">IBU</label>
+                            <input type="text" class="form-control" id="beer-ibu" tabindex="4">
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="beer-style">Beer Style</label>
+                            <input type="text" class="form-control" id="beer-style" tabindex="5">
+
+                        </div>
+                    </div>
+                </div>  
+                <button id="submit-beer" class="btn btn-warning form-control my-4" tabindex="6">Submit Beer</button>
+            </div> <!-- end left column -->
+
+            <!-- right column -->
+            <div class="col-md-7">
+                <small><em>TODO: add controls to sort columns | add pagination.</em></small>
+                <table id="beer-listing" class="table table-warning table-hover border border-1 table-striped">
+                    <tr>
+                        <th class="border border-1 border-start-0">Beer Name</th>
+                        <th class="border border-1 border-start-0">Brewer</th>
+                        <th class="border border-1 border-start-0">ABV</th>
+                        <th class="border border-1 border-start-0">IBU</th>
+                        <th class="border border-1 border-start-0">Style</th>
+                        <th class="border border-1 border-start-0">Actions</th>
+                    </tr>
+
+                    </table>
+            </div><!-- end right column-->
+                       
+            <div class="alert alert-warning my-5 border border-danger border-1" role="alert">
+                NOTE: This website has been created solely using HTML, JavaScript and Bootstrap. No extra CSS or SASS been used to create the look you see.
+            </div>
+
+        </div>  
+    </div>    
+</main>
+   
+
+     <!-- FOOTER -->
+     <footer class="container-fluid bg-dark text-light py-2 h-100 d-inline-block">
+        <div class="container">
+          <p>&copy 2023 Christian M Rapp | <a href="https://www.cmrwebstudio.com" target="_blank" class="text-decoration-none">CMR Web Studio</a>
+          <img class="float-end"  height=45px src="images\cmr_sig5.png"></p>
+        </div>
+      </footer>
+
+    <script src="submit-beer.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>
